@@ -4,34 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DropInd Invierno 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #222;
       text-align: center;
-      background-color: #fafafa;
-      padding: 20px;
     }
-    img {
-      max-width: 300px;
-      margin: 10px;
+
+    header {
+      padding: 40px 20px 20px;
+      background-color: #f8f8f8;
+      animation: fadeInDown 1s ease;
     }
+
     .logo {
-      max-width: 150px;
+      width: 140px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 10px 0 5px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 5px 0 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .gallery img {
+      width: 250px;
+      max-width: 90%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #111;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <img src="drop-logo.png" alt="Logo Drop" class="logo" />
-  <h1>DropInd Invierno 2025</h1>
-  <p>Descubrí nuestra nueva colección de invierno y visitá nuestro nuevo local en Salta.</p>
+  <header>
+    <img src="drop-logo.png" alt="Logo Drop" class="logo" />
+    <h1>Nueva colección Invierno 2025</h1>
+    <p>Descubrí lo último en DropInd. ¡Ahora también en nuestro local de Salta!</p>
+  </header>
 
-  <div>
+  <div class="gallery">
     <img src="01ebd67dc884a0e048e40f8df8d6fd38ebde380a5a65263da250bd.jpg" alt="Imagen 1" />
     <img src="7a62cb9dcc7aa86eab020bd3bf444bceb89b5a529881aabb5d6ea43.jpg" alt="Imagen 2" />
     <img src="5912ceb47fc6fa52ee420a2c5c87c13b80e36ba86ff03c36fa325f483.jpg" alt="Imagen 3" />
     <img src="10928f10d62ad100d21afe3ebf225002e65392164364892e1a8e4e4.jpg" alt="Imagen 4" />
   </div>
 
-  <p><a href="https://dropind.empretienda.com.ar" target="_blank">Ver productos</a></p>
+  <a href="https://dropind.empretienda.com.ar" target="_blank" class="btn">Ver productos</a>
 </body>
 </html>
